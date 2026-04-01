@@ -3,7 +3,7 @@
 //std = estandar
 //cout = character output
 //cin = caracter input 
-// >> enviar hacia adentro (inpit)
+// >> enviar hacia adentro (input)
 //<< enviar hacia afuera (output)
  int main(){
    std::string name; 
