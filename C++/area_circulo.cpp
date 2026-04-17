@@ -1,4 +1,4 @@
-//Area de un circulo = pi x radio al cuadrado
+//Area de un circulo = pi x radio al cuadradood
 
 #include <iostream>
 int main(){
