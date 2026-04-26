@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm> //trnasform
 using namespace std;
 int main() {
     vector<string> encuesta;
@@ -9,8 +10,18 @@ int main() {
     for(int x = 1 ; x<=10; x++){
      cout << "Cual color le gusta mas entre (rojo, verde, azul)"<<"("<<x<<"/10) : ";
      cin >> respuesta;
-     encuesta.push_back(respuesta);
+     transform(respuesta.begin(), respuesta.end(), respuesta.begin(), ::tolower);
+     if(respuesta == "rojo" || respuesta == "verde" || respuesta == "azul") {
+       encuesta.push_back(respuesta); 
+     }else{
+        cout<<"Respuesta fuera del rango."<<endl;
+        abort();
+     }
+    
     }
-    cout<<encuesta.size();
+    for (auto x : encuesta) {
+    cout << x << " ";
+    }
     return 0;
+}n 0;
 }
