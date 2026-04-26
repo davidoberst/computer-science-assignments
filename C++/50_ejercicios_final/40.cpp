@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     vector<string> encuesta;
     string respuesta;
-    map<string, int> contador
+    map<string, int> contador;
     contador["rojo"] = 0;
     contador["verde"] = 0;
     contador["azul"] = 0;
@@ -24,8 +24,9 @@ int main() {
         abort();
      }
     }
-    for (auto x : encuesta) {
-    cout << x << " ";
-    }
+    for (auto const& [color, cantidad] : contador) {
+    float porcentaje = (cantidad / 10.0) * 100;
+    cout << "El porcentaje de gusto por el " << color << " es: " << porcentaje << "%" << endl;
+}
     return 0;
 }
